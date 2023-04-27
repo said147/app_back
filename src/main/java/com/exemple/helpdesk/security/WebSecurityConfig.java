@@ -72,7 +72,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/listdemande").permitAll()
 				.antMatchers("/demanders/{id_demande}").permitAll()
 				.antMatchers("/listdemande").permitAll()
-				.antMatchers("/contacts/{id_demande}").permitAll()
+				.antMatchers("/changeDemande/{id_demande}").permitAll()
 				.antMatchers("/demandeCount").permitAll()
 
 				.antMatchers("/demandeCountWaiting").permitAll()
@@ -85,6 +85,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/addDemande").permitAll()
 				.antMatchers("/chercher").permitAll()
 				.antMatchers("/changestatus/{id_demande}").permitAll()
+				.antMatchers("/Deletedemande/{id_demande}").permitAll()
+
 
 				.antMatchers("/swagger-ui/swagger-ui-bundle.js").permitAll()
 				.antMatchers("/swagger-ui/swagger-ui-standalone-preset.js").permitAll()
@@ -97,6 +99,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/swagger-ui/index.html").permitAll()
 				.antMatchers("/v3/api-docs/swagger-config").permitAll()
 				.antMatchers("/v3/api-docs").permitAll()
+				.antMatchers("/materiel/{id_demande}").permitAll()
+
 
 				.anyRequest().authenticated();
 
