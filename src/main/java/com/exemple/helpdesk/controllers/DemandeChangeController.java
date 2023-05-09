@@ -129,4 +129,10 @@ public class DemandeChangeController {
         return true;
     }
 
+    @RequestMapping( value="/demandeCountChange/{id}",method= RequestMethod.GET)
+    public long getCountss(@PathVariable Long id){
+
+        return demandeChangeRepository.find_id_employers(id).stream().count();
+    }
+
 }

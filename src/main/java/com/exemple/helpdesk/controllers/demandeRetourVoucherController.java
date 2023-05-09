@@ -157,6 +157,11 @@ public class demandeRetourVoucherController {
         this.demandeRetourVoucherService.deleteBy(id_demandeRetour);
         return true;
     }
+    @RequestMapping( value="/demandeCountReturn/{id}",method= RequestMethod.GET)
+    public long getCountss(@PathVariable Long id){
+
+        return demandeRetourVoucherRepository.find_id_employer(id).stream().count();
+    }
 
 
 

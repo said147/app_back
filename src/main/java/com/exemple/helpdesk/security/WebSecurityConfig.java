@@ -111,6 +111,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/addDemandeChange").permitAll()
 				.antMatchers("/demaneChange/{id_demandeChange}").permitAll()
 				.antMatchers("/updateDemandeChange/{id_demandeChange}").permitAll()
+				.antMatchers("/demandeCountRequest/{id}").permitAll()
+				.antMatchers("/demandeCountChange/{id}").permitAll()
+				.antMatchers("/demandeCountTelework/{id}").permitAll()
+				.antMatchers("/demandeCountReturn/{id}").permitAll()
+
+
+
 
 				.anyRequest().authenticated();
 

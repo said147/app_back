@@ -159,7 +159,11 @@ public class DemandeTeleworkController {
         return true;
     }
 
+    @RequestMapping( value="/demandeCountTelework/{id}",method= RequestMethod.GET)
+    public long getCountss(@PathVariable Long id){
 
+        return demandeTeleworkRepository.find_id_employer(id).stream().count();
+    }
 
 
 }

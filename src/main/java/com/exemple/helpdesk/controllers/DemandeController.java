@@ -154,6 +154,11 @@ if(mc!=null){
         this.demandeService.deleteBy(id_demande);
         return true;
     }
+    @RequestMapping( value="/demandeCountRequest/{id}",method= RequestMethod.GET)
+    public long getCountss(@PathVariable Long id){
+
+        return demanderepositor.find_id_employer(id).stream().count();
+    }
 
 
 
