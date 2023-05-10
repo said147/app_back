@@ -147,6 +147,7 @@ public class DemandeTeleworkController {
         User user = userRepository.findByUsername(authentication.getName()).get();
         c.setUser(user);
         c.setStatus("Waiting");
+        c.setType_Demande( "IT Asset Telework");
         c.setId_demandeTelework(id_demandeTelework);
 
         return demandeTeleworkRepository.save(c);

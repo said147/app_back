@@ -117,6 +117,7 @@ public class DemandeChangeController {
         User user = userRepository.findByUsername(authentication.getName()).get();
         c.setUser(user);
         c.setStatus("Waiting");
+        c.setType_Demande("IT Asset change");
         c.setId_demandeChange(id_demandeChange);
 
         return demandeChangeRepository.save(c);

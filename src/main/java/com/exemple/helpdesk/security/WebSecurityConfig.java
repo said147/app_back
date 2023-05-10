@@ -104,10 +104,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 				.antMatchers("/addDemandeRetour").permitAll()
 				.antMatchers("/demaneRetour/{id_demandeRetour}").permitAll()
+
+				.antMatchers("/demandeTelework").permitAll()
 				.antMatchers("/addDemandeTelework").permitAll()
 				.antMatchers("/demaneTelework/{id_demandeTelework}").permitAll()
 				.antMatchers("/updateDemandeTelework/{id_demandeTelework}").permitAll()
 
+
+				.antMatchers("/demandeChange").permitAll()
 				.antMatchers("/addDemandeChange").permitAll()
 				.antMatchers("/demaneChange/{id_demandeChange}").permitAll()
 				.antMatchers("/updateDemandeChange/{id_demandeChange}").permitAll()
@@ -115,6 +119,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/demandeCountChange/{id}").permitAll()
 				.antMatchers("/demandeCountTelework/{id}").permitAll()
 				.antMatchers("/demandeCountReturn/{id}").permitAll()
+				.antMatchers("/api/email").permitAll()
+
+
+				.antMatchers("/changeDemandeTelework/{id_demandeTelework}").permitAll()
+				.antMatchers("/changestatusTelework/{id_demandeTelework}").permitAll()
+				.antMatchers("/changeDemandeRetour/{id_demandeRetour}").permitAll()
+				.antMatchers("/changestatusRetour/{id_demandeRetour}").permitAll()
+
+				.antMatchers("/changeDemandeChange/{id_demandeChange}").permitAll()
+				.antMatchers("/changestatusChange/{id_demandeChange}").permitAll()
+
+
 
 
 

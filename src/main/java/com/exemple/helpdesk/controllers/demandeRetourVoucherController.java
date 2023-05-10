@@ -146,6 +146,7 @@ public class demandeRetourVoucherController {
         User user = userRepository.findByUsername(authentication.getName()).get();
         c.setUser(user);
         c.setStatus("Waiting");
+        c.setType_Demande("IT Asset return voucher");
         c.setId_demandeRetour(id_demandeRetour);
 
         return demandeRetourVoucherRepository.save(c);
